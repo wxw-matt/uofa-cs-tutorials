@@ -56,7 +56,7 @@ case $semester_id in
     exit 1
     ;;
 esac
-echo 
+echo
 
 course_name=""
 echo "(1) OOP"
@@ -82,7 +82,7 @@ esac
 echo "Checkout svn repository for $student_id studying $course_name \
 in $year $semester_name ..."
 sleep 0.5
-# svn co --username $student_id https://version-control.adelaide.edu.au/svn/$student_id
+svn co --username $student_id https://version-control.adelaide.edu.au/svn/$student_id
 case $course_name in
   "oop")
     do_oop $student_id $year $semester_name $course_name
@@ -93,9 +93,9 @@ case $course_name in
     ;;
 esac
 
-echo 
-echo "Directories have been initialized already." 
-echo 
+echo
+echo "Directories have been initialized already."
+echo
 echo "Please follow the instructions to commit:"
 echo "# Go to your svn root directory:"
 echo cd $student_id
